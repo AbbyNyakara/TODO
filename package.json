@@ -21,7 +21,7 @@
   "bugs": {
     "url": "git+https://github.com/AbbyNyakara/TODO.git"
   },
-  "homepage": "git+https://github.com/AbbyNyakara/TODO.git",
+  "homepage": "https://abbynyakara.github.io/TODO/",
   "devDependencies": {
     "css-loader": "^6.7.1",
     "express": "^4.18.1",
