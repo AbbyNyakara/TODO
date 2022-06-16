@@ -1,3 +1,5 @@
+/* eslint-disable no-alert */
+
 import 'lodash';
 import './style.css';
 import removeTodo from './ui.js';
