@@ -1,6 +1,6 @@
 import { addToDo, removeToDo } from '../__mocks__/add.js';
 
-describe ('add and delete to-do items', () => {
+describe('add and delete to-do items', () => {
   test('adds item to the list', () => {
     const list = [];
     const item = {
@@ -14,12 +14,12 @@ describe ('add and delete to-do items', () => {
 
   test('removes item from array', () => {
     const listArr = [
-      {task: "laundry1", completed: false, index: 1},
-      {task: "laundry2", completed: false, index: 2},
-      {task: "laundry3", completed: false, index: 3}
-    ]
+      { task: 'laundry1', completed: false, index: 1 },
+      { task: 'laundry2', completed: false, index: 2 },
+      { task: 'laundry3', completed: false, index: 3 },
+    ];
 
     removeToDo(listArr, 1);
     expect(listArr).toHaveLength(2);
-  })
-})
+  });
+});
