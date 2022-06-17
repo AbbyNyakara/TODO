@@ -21,5 +21,5 @@ export const updateStatus = (arr) => {
     arr[i].completed = true;
     return arr[i].completed;
   }
-  return arr[i].completed
+  return arr.completed;
 };

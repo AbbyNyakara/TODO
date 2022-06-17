@@ -40,13 +40,6 @@ describe('editable content, completed tasks deleted, change completed status', (
   });
 
   test('completed status to be changes to false', () => {
-    // function updateStatus(arr) {
-    //   for (let i = 0; i < arr.length; i += 1) {
-    //     arr[i].completed = true;
-    //     return arr[i].completed;
-    //   }
-    //   return arr[i].completed
-    // }
     const newArr = [{ task: 'clean', completed: false }];
     expect(updateStatus(newArr)).toBeTruthy();
   });
