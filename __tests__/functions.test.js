@@ -37,7 +37,6 @@ describe('editable content, completed tasks deleted, change completed status', (
     expect(completedTasks).toHaveLength(0);
   })
 
-
   test('completed status to be changes to false', () => {
     function updateStatus(arr) {
       
@@ -49,7 +48,6 @@ describe('editable content, completed tasks deleted, change completed status', (
     let newArr = [{task: "clean", completed: false}];
     expect(updateStatus(newArr)).toBeTruthy()
   })
-
 
   test('Test updated edits', () => {
     const id = 2;
@@ -63,7 +61,3 @@ describe('editable content, completed tasks deleted, change completed status', (
     expect(result).toBe('edited');
   });
 })
-
-
-
-
