@@ -15,3 +15,11 @@ export const editableContent = (arr, id, el) => {
   }
   return array;
 };
+
+export const updateStatus = (arr) => {
+  for (let i = 0; i < arr.length; i += 1) {
+    arr[i].completed = true;
+    return arr[i].completed;
+  }
+  return arr[i].completed
+};

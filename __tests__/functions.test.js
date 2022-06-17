@@ -1,5 +1,5 @@
-import { 
-  addToDo, removeToDo, deleteAll, editableContent 
+import {
+  addToDo, removeToDo, deleteAll, editableContent, updateStatus,
 } from '../__mocks__/functions.js';
 
 describe('add and delete to-do items', () => {
@@ -40,13 +40,14 @@ describe('editable content, completed tasks deleted, change completed status', (
   });
 
   test('completed status to be changes to false', () => {
-    function updateStatus(arr) {
-      for (let i = 0; i < arr.length; i +=1 ){
-          arr[i].completed = true;
-          return arr[i].completed;
-      }
-    }
-    let newArr = [{ task: 'clean', completed: false }];
+    // function updateStatus(arr) {
+    //   for (let i = 0; i < arr.length; i += 1) {
+    //     arr[i].completed = true;
+    //     return arr[i].completed;
+    //   }
+    //   return arr[i].completed
+    // }
+    const newArr = [{ task: 'clean', completed: false }];
     expect(updateStatus(newArr)).toBeTruthy();
   });
 
