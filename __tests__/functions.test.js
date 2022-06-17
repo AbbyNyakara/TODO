@@ -1,4 +1,6 @@
-import { addToDo, removeToDo, deleteAll, editableContent } from '../__mocks__/functions.js';
+import { 
+  addToDo, removeToDo, deleteAll, editableContent 
+} from '../__mocks__/functions.js';
 
 describe('add and delete to-do items', () => {
   test('adds item to the list', () => {
@@ -25,29 +27,28 @@ describe('add and delete to-do items', () => {
 });
 
 // Part 2 Testing
-describe('editable content, completed tasks deleted, change completed status', () =>{
+describe('editable content, completed tasks deleted, change completed status', () => {
   test('All completed tasks to be cleared', () => {
     let completedTasks = [
-    { task: 'laundry1', completed: true, index: 1 },
-    { task: 'laundry2', completed: true, index: 2 },
-    { task: 'laundry3', completed: true, index: 3 },
+      { task: 'laundry1', completed: true, index: 1 },
+      { task: 'laundry2', completed: true, index: 2 },
+      { task: 'laundry3', completed: true, index: 3 },
     ];
 
     completedTasks = deleteAll(completedTasks);
     expect(completedTasks).toHaveLength(0);
-  })
+  });
 
   test('completed status to be changes to false', () => {
     function updateStatus(arr) {
-      
-      for (let i=0; i<arr.length; i++){
+      for (let i = 0; i < arr.length; i +=1 ){
           arr[i].completed = true;
           return arr[i].completed;
       }
     }
-    let newArr = [{task: "clean", completed: false}];
-    expect(updateStatus(newArr)).toBeTruthy()
-  })
+    let newArr = [{ task: 'clean', completed: false }];
+    expect(updateStatus(newArr)).toBeTruthy();
+  });
 
   test('Test updated edits', () => {
     const id = 2;
@@ -60,4 +61,4 @@ describe('editable content, completed tasks deleted, change completed status', (
     const result = editableContent(arr, id, el);
     expect(result).toBe('edited');
   });
-})
+});
